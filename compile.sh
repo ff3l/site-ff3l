@@ -24,7 +24,7 @@ fi
 # Build ausführen 
 # Optional kann hier mit GLUON_TARGET=x86-generic auch ein anderes Target erstellt werden 
 # Optional kann mit BROKEN=1 das Erstellen experimenteller Images ergänzt werden
-cd $WORKSPACE/gluon
+cd $WORKSPACE/gluon-$1
 make update GLUON_RELEASE=$1+$2 GLUON_TARGET=$3 $5 $6 $7 $8 $9
 make clean GLUON_RELEASE=$1+$2 GLUON_TARGET=$3 $5 $6 $7 $8 $9
 

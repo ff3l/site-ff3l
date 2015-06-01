@@ -27,7 +27,7 @@ if [ "x$WORKSPACE" = "x" ]; then
 	WORKSPACE=`pwd`
 fi
 
-cd $WORKSPACE/gluon
+cd $WORKSPACE/gluon-$1
 
 # Manifeste erstellen 
 make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$3 GLUON_PRIORITY=$5
