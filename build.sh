@@ -36,8 +36,8 @@ letzterBefehlErfolgreich;
 #echo $JOBS
 
 # Gluon Pakete aktualisieren und Build ausführen
-#cd $WORKSPACE
-#sh ./compile.sh $1 $2 ar71xx-generic $4 $JOBS $5 $6 $7 $8
+cd $WORKSPACE
+sh ./compile.sh $1 $2 ar71xx-generic $4 $JOBS $5 $6 $7 $8
 #letzterBefehlErfolgreich;
 #sh ./compile.sh $1 $2 ar71xx-nand $4 $JOBS $5 $6 $7 $8
 #letzterBefehlErfolgreich;
