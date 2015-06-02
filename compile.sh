@@ -13,8 +13,22 @@
 # - Optionale Parameter für make (z.B. V=s oder -j 4)
 #
 ###############################################################################################
-GLUON_RELEASE=$1.0+$2
+case "$4" in
+experimental)
+	GLUON_RELEASE=$1.0+$2-exp
+	;;
+beta)
+	GLUON_RELEASE=$1.0+$2-beta
+	;;
+stable)
+	GLUON_RELEASE=$1.0+$2-stable
+	;;
+*)
+	GLUON_RELEASE=$1.0+$2
+	;;
+esac
 
+echo $GLUON_RELEASE
 # Bei Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
 # andernfalls wird das aktuelle Verzeichnis verwendet  
 

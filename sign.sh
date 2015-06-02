@@ -18,7 +18,20 @@
 ###############################################################################################
 
 # Releasenummer der zu erstellenden Images
-GLUON_RELEASE=$1.0+$2
+case "$3" in
+experimental)
+        GLUON_RELEASE=$1.0+$2-exp
+        ;;
+beta)
+        GLUON_RELEASE=$1.0+$2-beta
+        ;;
+stable)
+        GLUON_RELEASE=$1.0+$2-stable
+        ;;
+*)
+        GLUON_RELEASE=$1.0+$2
+        ;;
+esac
 
 # Bei Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
 # andernfalls wird das aktuelle Verzeichnis verwendet  
