@@ -37,4 +37,4 @@ sh ./build.sh $GLUON_COMMIT $BUILD_NUMBER $GLUON_URL $GLUON_BRANCH V=s
 # Manifest für Autoupdater erstellen und mit den Key des Servers unterschreiben 
 # Der private Schlüssel des Servers muss in $JENKINS_HOME/secret liegen
 cd $WORKSPACE
-sh ./sign.sh $GLUON_COMMIT $BUILD_NUMBER $GLUON_BRANCH $JENKINS_HOME/secret $5
+sh ./sign.sh $GLUON_COMMIT $BUILD_NUMBER $GLUON_BRANCH $JENKINS_HOME/secret $GLUON_PRIORITY
