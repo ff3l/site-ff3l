@@ -13,6 +13,7 @@
 # - Optionale Parameter für make (z.B. V=s oder -j 4)
 #
 ###############################################################################################
+GLUON_RELEASE=$1.0+$2
 
 # Bei Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
 # andernfalls wird das aktuelle Verzeichnis verwendet  
@@ -25,7 +26,7 @@ fi
 # Optional kann hier mit GLUON_TARGET=x86-generic auch ein anderes Target erstellt werden 
 # Optional kann mit BROKEN=1 das Erstellen experimenteller Images ergänzt werden
 cd $WORKSPACE/gluon-$1
-make update GLUON_RELEASE=$1+$2 GLUON_TARGET=$3 $5 $6 $7 $8 $9
-make clean GLUON_RELEASE=$1+$2 GLUON_TARGET=$3 $5 $6 $7 $8 $9
+make update GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$3 $5 $6 $7 $8 $9
+make clean GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$3 $5 $6 $7 $8 $9
 
-make GLUON_RELEASE=$1+$2 GLUON_TARGET=$3 GLUON_BRANCH=$4 $5 $6 $7 $8 $9
+make GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$3 GLUON_BRANCH=$4 $5 $6 $7 $8 $9

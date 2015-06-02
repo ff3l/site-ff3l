@@ -13,7 +13,7 @@
 
 # Umgebungsvariablen
 export WORKSPACE=`pwd`
-export JENKINS_HOME=~
+export JENKINS_HOME=/var/lib/jenkins
 export BUILD_NUMBER=000
 # Jenkins Build-Konfiguration
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
