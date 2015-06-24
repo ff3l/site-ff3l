@@ -43,6 +43,6 @@ fi
 
 mkdir $WORKSPACE/gluon-$1/site
 
-cp -r $WORKSPACE/site.mk $WORKSPACE/site.conf $WORKSPACE/gluon-$1/site
+cp -r $WORKSPACE/site.mk $WORKSPACE/site.conf $WORKSPACE/i18n $WORKSPACE/gluon-$1/site
 
 echo $JOBS
