@@ -4,28 +4,33 @@ gluon-alfred \
 gluon-announced \
 gluon-autoupdater \
 gluon-config-mode-autoupdater \
+gluon-config-mode-contact-info \
+gluon-config-mode-core \
+gluon-config-mode-geo-location \
 gluon-config-mode-hostname \
 gluon-config-mode-mesh-vpn \
-gluon-config-mode-geo-location \
-gluon-config-mode-contact-info \
 gluon-ebtables-filter-multicast \
 gluon-ebtables-filter-ra-dhcp \
 gluon-luci-admin \
 gluon-luci-autoupdater \
 gluon-luci-portconfig \
-gluon-next-node \
+gluon-luci-wifi-config \
 gluon-luci-private-wifi \
+gluon-next-node \
 gluon-mesh-vpn-fastd \
 gluon-radvd \
+gluon-setup-mode \
 gluon-status-page \
-iwinfo \
+haveged \
 iptables \
-haveged
+iwinfo
 
 
-DEFAULT_GLUON_RELEASE := 2014.4a~$(shell date '+%Y%m%d')-exp
+DEFAULT_GLUON_RELEASE := 2015.1~$(shell date '+%Y%m%d')-exp
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 
 GLUON_PRIORITY ?= 0
+
+GLUON_LANGS ?= en de

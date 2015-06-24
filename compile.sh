@@ -15,16 +15,16 @@
 ###############################################################################################
 case "$4" in
 experimental)
-	GLUON_RELEASE=$1.0+$2-exp
+	GLUON_RELEASE=$1+$2-exp
 	;;
 beta)
-	GLUON_RELEASE=$1.0+$2-beta
+	GLUON_RELEASE=$1+$2-beta
 	;;
 stable)
-	GLUON_RELEASE=$1.0+$2-stable
+	GLUON_RELEASE=$1+$2-stable
 	;;
 *)
-	GLUON_RELEASE=$1.0+$2
+	GLUON_RELEASE=$1+$2
 	;;
 esac
 
