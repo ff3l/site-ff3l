@@ -21,10 +21,11 @@ fi
 # andernfalls wird das aktuelle Verzeichnis verwendet  
 
 letzterBefehlErfolgreich () {
-	if [ $? != 0 ]
+        ERROR=$?  
+	if [ $ERROR != 0 ]
 	then
-		echo "Etwas ist schief gelaufen. Beende Kompilierungsprozess, Exitstatus $?."
-		exit $?;
+		echo "Etwas ist schief gelaufen. Beende Kompilierungsprozess, Exitstatus $ERROR."
+		exit $ERROR;
 	fi
 }
 
