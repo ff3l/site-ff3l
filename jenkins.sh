@@ -48,5 +48,5 @@ sh ./sign.sh $GLUON_COMMIT $BUILD_NUMBER $GLUON_BRANCH $JENKINS_HOME/secret $GLU
 # Aktuell erstellte Images werden in ein Archiv gespeichert
 cd $WORKSPACE
 echo "Copy images to archive"
-mkdir -p $WORKSPACE/images-archive/$GLUON_BUILD/build-$BUILD_NUMBER
-/bin/cp -rv $WORKSPACE/gluon-$GLUON_COMMIT/images/* $WORKSPACE/images-archive/$GLUON_BRANCH/build-$BUILD_NUMBER/
+mkdir -p $WORKSPACE/images-archive/$GLUON_BRANCH/build-$BUILD_NUMBER
+/bin/cp -rv $WORKSPACE/gluon-$GLUON_COMMIT/images/* $WORKSPACE/images-archive/$GLUON_BRANCH/build-$BUILD_NUMBER
