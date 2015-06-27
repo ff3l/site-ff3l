@@ -42,5 +42,5 @@ sh ./sign.sh $GLUON_COMMIT $BUILD_NUMBER $GLUON_BRANCH $JENKINS_HOME/secret $GLU
 
 # Aktuell erstellte Images werden in ein Archiv gespeichert
 cd $WORKSPACE
-mkdir -p $WORKSPACE/images-archive/$GLUON_RELEASE/$CREATE_TIME
-/bin/cp -rv $WORKSPACE/gluon-$GLUON_COMMIT/images $WORKSPACE/images-archive/$GLUON_RELEASE/$CREATE_TIME
+mkdir -p $WORKSPACE/images-archive/$GLUON_COMMIT/$CREATE_TIME
+/bin/cp -rv $WORKSPACE/gluon-$GLUON_COMMIT/images $WORKSPACE/images-archive/$GLUON_COMMIT/$CREATE_TIME
