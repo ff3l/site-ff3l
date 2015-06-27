@@ -21,6 +21,7 @@ GLUON_URL=https://github.com/freifunk-gluon/gluon.git
 GLUON_COMMIT=v2015.1.1
 GLUON_BRANCH=experimental
 GLUON_PRIORITY=0
+CREATE_TIME=$(date '+%Y-%m-%d')
 
 # Beim Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
 # andernfalls wird das aktuelle Verzeichnis verwendet
@@ -38,3 +39,8 @@ sh ./build.sh $GLUON_COMMIT $BUILD_NUMBER $GLUON_URL $GLUON_BRANCH V=s
 # Der private Schlüssel des Servers muss in $JENKINS_HOME/secret liegen
 cd $WORKSPACE
 sh ./sign.sh $GLUON_COMMIT $BUILD_NUMBER $GLUON_BRANCH $JENKINS_HOME/secret $GLUON_PRIORITY
+
+# Aktuell erstellte Images werden in ein Archiv gespeichert
+cd $WORKSPACE
+mkdir -p $WORKSPACE/images-archive/$GLUON_RELEASE/$CREATE_TIME
+/bin/cp -rv $WORKSPACE/gluon-$GLUON_COMMIT/images $WORKSPACE/images-archive/$GLUON_RELEASE/$CREATE_TIME
