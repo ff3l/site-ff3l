@@ -21,10 +21,11 @@ fi
 # andernfalls wird das aktuelle Verzeichnis verwendet  
 
 letzterBefehlErfolgreich () {
-	if [ $? != 0 ]
+	ERROR=$?
+	if [ $ERROR != 0 ]
 	then
-		echo "Etwas ist schief gelaufen. Beende Kompilierungsprozess, Exitstatus $?."
-		exit $?;
+		echo "Etwas ist schief gelaufen. Beende Kompilierungsprozess, Exitstatus $ERROR."
+		exit $ERROR;
 	fi
 }
 
@@ -38,7 +39,7 @@ letzterBefehlErfolgreich;
 # Gluon Pakete aktualisieren und Build ausführen
 cd $WORKSPACE
 sh ./compile.sh $1 $2 ar71xx-generic $4 $JOBS $5 $6 $7 $8
-#letzterBefehlErfolgreich;
+letzterBefehlErfolgreich;
 #sh ./compile.sh $1 $2 ar71xx-nand $4 $JOBS $5 $6 $7 $8
 #letzterBefehlErfolgreich;
 #sh ./compile.sh $1 $2 mpc85xx-generic $4 $JOBS $5 $6 $7 $8
