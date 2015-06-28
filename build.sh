@@ -3,9 +3,9 @@
 ###############################################################################################
 # 
 # Dieses Script holt die vorgegebene Gluon-Version in das aktuelle Arbeitsverzeichnis 
-# uns erstellt die Images.
+# und erstellt die Images.
 #
-# Das Script benötigt die folgenden Kommandozeilenparameter:
+# Folgende Kommandozeilenparameter werden benötigt:
 # - Gluon-Commit (z.B. v2014.4)
 # - Build-Nummer (z.B. 114)
 # - URL des Gluon-Repositories (z.B. https://github.com/freifunk-gluon/gluon.git)
