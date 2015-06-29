@@ -1,17 +1,17 @@
 #!/bin/sh
 # 
 ###############################################################################################
-# Buildscript zu erstellung Manifest-dateien für den Autoupdater
+# Buildscript zu Erstellung Manifest-Dateien für den Autoupdater
 # 
-# Dieses Script wird nach dem Erstellen der Images ausgeführt und erstellt
+# Dieses Script wird nach der Kompilation der Images ausgeführt und erstellt
 # die Manifest-Dateien mit den Signaturen des Autoupdater. 
-# Es werden insgesamt 3 manifest-Dateien erstellt. 
+# Es werden insgesamt 3 Manifest-Dateien angelegt. 
 #
-# Für die Signierung muss das Tool Tool 'ecdsasign' vverfügbar sein.
+# Für die Signierung muss das Tool 'ecdsasign' verfügbar sein.
 # Repo: https://github.com/tcatm/ecdsautils
 #
-# Das Script benötigt die folgenden Kommandozeilenparameter:
-# - Gluon-Commit (z.B. v2014.4)
+# Folgende Kommandozeilenparameter werden benötigt:
+# - Gluon-Commit (z.B. v2015.1.1)
 # - Build-Nummer (z.B. 114)
 # - Datei, die den Schlüssel für die Signierung enthält (z.B. ~/secret)
 #
