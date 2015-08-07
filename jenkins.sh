@@ -17,7 +17,7 @@
 ###############################################################################################
 
 # Globale Einstellungen
-GLUON_URL=https://github.com/freifunk-gluon/gluon.git
+GLUON_URL=https://github.com/ff3l/gluon.git
 GLUON_COMMIT=v2015.1.1
 #GLUON_BRANCH=experimental
 GLUON_BRANCH=beta
