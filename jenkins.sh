@@ -22,7 +22,7 @@ GLUON_COMMIT=v2015.1.2
 GLUON_BRANCH=experimental
 #GLUON_BRANCH=beta
 #GLUON_BRANCH=stable
-GLUON_PRIORITY=2
+GLUON_PRIORITY=0
 CREATE_TIME=$(date '+%Y-%m-%d-%H-%M')
 
 # Beim Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
