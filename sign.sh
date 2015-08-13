@@ -11,7 +11,7 @@
 # Repo: https://github.com/tcatm/ecdsautils
 #
 # Folgende Kommandozeilenparameter werden benötigt:
-# - Gluon-Commit (z.B. v2014.4)
+# - Gluon-Commit (z.B. v2015.1.1)
 # - Build-Nummer (z.B. 114)
 # - Datei, die den Schlüssel für die Signierung enthält (z.B. ~/secret)
 #

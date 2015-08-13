@@ -24,6 +24,8 @@ if [ ! -d "$WORKSPACE/gluon-$1" ]; then
 	git clone $2 $WORKSPACE/gluon-$1
 	JOBS='-j 1'
 else
+	# Alte Images zuvor löschen
+	rm -rf $WORKSPACE/gluon-$1/images/*
 	JOBS='-j 8'
 fi
 

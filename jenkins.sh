@@ -18,8 +18,10 @@
 
 # Globale Einstellungen
 GLUON_URL=https://github.com/freifunk-gluon/gluon.git
-GLUON_COMMIT=v2014.4
-GLUON_BRANCH=experimental
+GLUON_COMMIT=v2015.1.1
+#GLUON_BRANCH=experimental
+#GLUON_BRANCH=beta
+GLUON_BRANCH=stable
 GLUON_PRIORITY=0
 CREATE_TIME=$(date '+%Y-%m-%d-%H-%M')
 
@@ -49,4 +51,4 @@ sh ./sign.sh $GLUON_COMMIT $BUILD_NUMBER $GLUON_BRANCH $JENKINS_HOME/secret $GLU
 cd $WORKSPACE
 echo "Copy images to archive"
 mkdir -p $WORKSPACE/images-archive/$GLUON_BRANCH/build-$BUILD_NUMBER
-/bin/cp -rv $WORKSPACE/gluon-$GLUON_COMMIT/images/* $WORKSPACE/images-archive/$GLUON_BRANCH/build-$BUILD_NUMBER
+/bin/cp -rv $WORKSPACE/gluon-$GLUON_COMMIT/images/* $WORKSPACE/images-archive/$GLUON_BRANCH/build-$BUILD_NUMBER/

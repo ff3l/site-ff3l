@@ -13,22 +13,28 @@
 # - Optionale Parameter für make (z.B. V=s oder -j 4)
 #
 ###############################################################################################
+GLUON_BROKEN=0
+
 case "$4" in
 experimental)
-	GLUON_RELEASE=$1.0+$2-exp
+	GLUON_RELEASE=$1+$2-exp
+	GLUON_BROKEN=1
 	;;
 beta)
-	GLUON_RELEASE=$1.0+$2-beta
+	GLUON_RELEASE=$1+$2-beta
+	GLUON_BROKEN=0
 	;;
 stable)
-	GLUON_RELEASE=$1.0+$2-stable
+	GLUON_RELEASE=$1+$2-stable
+	GLUON_BROKEN=0
 	;;
 *)
-	GLUON_RELEASE=$1.0+$2
+	GLUON_RELEASE=$1+$2
+	GLUON_BROKEN=0
 	;;
 esac
 
-echo $GLUON_RELEASE
+#echo $GLUON_RELEASE
 # Bei Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
 # andernfalls wird das aktuelle Verzeichnis verwendet  
 
@@ -43,4 +49,4 @@ cd $WORKSPACE/gluon-$1
 make update GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$3 $5 $6 $7 $8 $9
 make clean GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$3 $5 $6 $7 $8 $9
 
-make GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$3 GLUON_BRANCH=$4 $5 $6 $7 $8 $9
+make GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$3 GLUON_BRANCH=$4 BROKEN=$GLUON_BROKEN $5 $6 $7 $8 $9

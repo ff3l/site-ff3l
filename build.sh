@@ -6,7 +6,7 @@
 # und erstellt die Images.
 #
 # Folgende Kommandozeilenparameter werden benötigt:
-# - Gluon-Commit (z.B. v2014.4)
+# - Gluon-Commit (z.B. v2015.1.1)
 # - Build-Nummer (z.B. 114)
 # - URL des Gluon-Repositories (z.B. https://github.com/freifunk-gluon/gluon.git)
 # - Optionale Parameter für make (z.B. V=s oder -j 4)
@@ -21,7 +21,7 @@ fi
 # andernfalls wird das aktuelle Verzeichnis verwendet  
 
 letzterBefehlErfolgreich () {
-	ERROR=$?
+        ERROR=$?  
 	if [ $ERROR != 0 ]
 	then
 		echo "Etwas ist schief gelaufen. Beende Kompilierungsprozess, Exitstatus $ERROR."
