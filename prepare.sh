@@ -32,8 +32,8 @@ fi
 # Gluon Repo aktualisieren
 
 cd $WORKSPACE/gluon-$1
-git fetch
-git checkout $1
+git fetch >/dev/null 2>&1
+git checkout $1 >/dev/null 2>&1
 
 
 # Dateien in das Gluon-Repo kopieren
