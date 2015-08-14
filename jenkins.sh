@@ -18,7 +18,7 @@
 
 # Globale Einstellungen
 GLUON_URL=https://github.com/ff3l/gluon.git
-GLUON_COMMIT=v2015.1.2
+GLUON_COMMIT=master
 GLUON_BRANCH=experimental
 #GLUON_BRANCH=beta
 #GLUON_BRANCH=stable
