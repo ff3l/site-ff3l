@@ -17,7 +17,6 @@ if [ "x$WORKSPACE" = "x" ]; then
 	WORKSPACE=`pwd`
 fi
 
-
 # Verzeichnis für Gluon-Repo erstellen und initialisieren
 
 if [ ! -d "$WORKSPACE/gluon-$1" ]; then
@@ -29,12 +28,14 @@ else
 	JOBS='-j 8'
 fi
 
+if [ $3 = 1 ]; then
+ JOBS='-j 1'
+fi
 # Gluon Repo aktualisieren
 
 cd $WORKSPACE/gluon-$1
-git fetch
-git checkout $1
-
+git fetch > /dev/null 2>&1
+git checkout $1 > /dev/null 2>&1
 
 # Dateien in das Gluon-Repo kopieren
 # In der site.conf werden hierbei Umgebungsvariablen durch die aktuelle Werte ersetzt

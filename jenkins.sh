@@ -23,6 +23,7 @@ GLUON_BRANCH=experimental
 #GLUON_BRANCH=beta
 #GLUON_BRANCH=stable
 GLUON_PRIORITY=2
+GLUON_DEBUG=0
 CREATE_TIME=$(date '+%Y-%m-%d-%H-%M')
 
 # Beim Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
@@ -34,7 +35,7 @@ fi
 
 # Images erstellen
 cd $WORKSPACE
-sh ./build.sh $GLUON_COMMIT $BUILD_NUMBER $GLUON_URL $GLUON_BRANCH V=s
+sh ./build.sh $GLUON_COMMIT $BUILD_NUMBER $GLUON_URL $GLUON_BRANCH V=s $GLUON_DEBUG
 
 ERROR=$?
 if [ $ERROR != 0 ]
