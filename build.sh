@@ -31,10 +31,10 @@ letzterBefehlErfolgreich () {
 
 # Build Verzeichnis vorbereiten
 cd $WORKSPACE
-JOBS=$(sh ./prepare.sh $1 $3)
+JOBS=$(sh ./prepare.sh $1 $3 $6)
 letzterBefehlErfolgreich;
 
-#echo $JOBS
+echo $JOBS
 
 # Gluon Pakete aktualisieren und Build ausführen
 cd $WORKSPACE
