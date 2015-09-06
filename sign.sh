@@ -11,25 +11,26 @@
 # Repo: https://github.com/tcatm/ecdsautils
 #
 # Folgende Kommandozeilenparameter werden benötigt:
-# - Gluon-Commit (z.B. v2015.1.1)
+# - Gluon-Commit (z.B. ff3l-v2015.1.2)
 # - Build-Nummer (z.B. 114)
 # - Datei, die den Schlüssel für die Signierung enthält (z.B. ~/secret)
+# - Gluon-Version (z.B. v2015.1.2)
 #
 ###############################################################################################
 
 # Releasenummer der zu erstellenden Images
 case "$3" in
 experimental)
-        GLUON_RELEASE=$1+$2-exp
+        GLUON_RELEASE=$1+$6-exp
         ;;
 beta)
-        GLUON_RELEASE=$1+$2-beta
+        GLUON_RELEASE=$1+$6-beta
         ;;
 stable)
-        GLUON_RELEASE=$1+$2-stable
+        GLUON_RELEASE=$1+$6-stable
         ;;
 *)
-        GLUON_RELEASE=$1+$2
+        GLUON_RELEASE=$1+$6
         ;;
 esac
 
