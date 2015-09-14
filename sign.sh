@@ -20,17 +20,20 @@
 
 # Releasenummer der zu erstellenden Images
 case "$3" in
+testing)
+        GLUON_RELEASE=$6+$2-test
+        ;;
 experimental)
-        GLUON_RELEASE=$1+$6-exp
+        GLUON_RELEASE=$6+$2-exp
         ;;
 beta)
-        GLUON_RELEASE=$1+$6-beta
+        GLUON_RELEASE=$6+$2-beta
         ;;
 stable)
-        GLUON_RELEASE=$1+$6-stable
+        GLUON_RELEASE=$6+$2-stable
         ;;
 *)
-        GLUON_RELEASE=$1+$6
+        GLUON_RELEASE=$6+$2
         ;;
 esac
 

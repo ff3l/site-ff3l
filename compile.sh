@@ -16,20 +16,24 @@
 GLUON_BROKEN=0
 
 case "$4" in
+testing)
+	GLUON_RELEASE=$9+$2-test
+	GLUON_BROKEN=1
+	;;
 experimental)
-	GLUON_RELEASE=$1+$8-exp
+	GLUON_RELEASE=$9+$2-exp
 	GLUON_BROKEN=1
 	;;
 beta)
-	GLUON_RELEASE=$1+$8-beta
+	GLUON_RELEASE=$9+$2-beta
 	GLUON_BROKEN=0
 	;;
 stable)
-	GLUON_RELEASE=$1+$8-stable
+	GLUON_RELEASE=$9+$2-stable
 	GLUON_BROKEN=0
 	;;
 *)
-	GLUON_RELEASE=$1+$8
+	GLUON_RELEASE=$9+$2
 	GLUON_BROKEN=0
 	;;
 esac

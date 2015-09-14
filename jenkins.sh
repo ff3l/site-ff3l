@@ -17,10 +17,10 @@
 ###############################################################################################
 
 # Globale Einstellungen
-GLUON_URL=https://github.com/ff3l/gluon.git
-GLUON_COMMIT=ff3l-v2015.1.2
+GLUON_URL=https://github.com/freifunk-gluon/gluon.git
+GLUON_COMMIT=v2015.1.2
 GLUON_VERSION=v2015.1.2
-GLUON_BRANCH=experimental
+GLUON_BRANCH=testing
 #GLUON_BRANCH=beta
 #GLUON_BRANCH=stable
 GLUON_PRIORITY=0
@@ -36,7 +36,7 @@ fi
 
 # Images erstellen
 cd $WORKSPACE
-sh ./build.sh $GLUON_COMMIT $BUILD_NUMBER $GLUON_URL $GLUON_BRANCH V=s $GLUON_DEBUG $GLUON_VERSION
+sh ./build.sh $GLUON_COMMIT $FF3L_BUILD_NUMBER $GLUON_URL $GLUON_BRANCH V=s $GLUON_DEBUG $GLUON_VERSION
 
 ERROR=$?
 if [ $ERROR != 0 ]
@@ -47,7 +47,7 @@ fi
 # Manifest für Autoupdater erstellen und mit den Key des Servers unterschreiben 
 # Der private Schlüssel des Servers muss in $JENKINS_HOME/secret liegen
 cd $WORKSPACE
-sh ./sign.sh $GLUON_COMMIT $BUILD_NUMBER $GLUON_BRANCH $JENKINS_HOME/secret $GLUON_PRIORITY $GLUON_VERSION
+sh ./sign.sh $GLUON_COMMIT $FF3L_BUILD_NUMBER $GLUON_BRANCH $JENKINS_HOME/secret $GLUON_PRIORITY $GLUON_VERSION
 
 # Aktuell erstellte Images werden in ein Archiv gespeichert
 cd $WORKSPACE
