@@ -1,5 +1,5 @@
 GLUON_SITE_PACKAGES := \
-gluon-mesh-batman-adv-14 \
+gluon-mesh-batman-adv-15 \
 gluon-alfred \
 gluon-announced \
 gluon-autoupdater \
@@ -16,7 +16,6 @@ gluon-luci-autoupdater \
 gluon-luci-portconfig \
 gluon-luci-wifi-config \
 gluon-luci-private-wifi \
-gluon-luci-node-role \
 gluon-next-node \
 gluon-mesh-vpn-fastd \
 gluon-radvd \
@@ -34,4 +33,4 @@ GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 
 GLUON_PRIORITY ?= 0
 
-GLUON_LANGS ?= en de fr
+GLUON_LANGS ?= en de
