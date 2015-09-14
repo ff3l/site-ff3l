@@ -24,7 +24,7 @@ GLUON_BRANCH=testing
 #GLUON_BRANCH=beta
 #GLUON_BRANCH=stable
 GLUON_PRIORITY=0
-GLUON_DEBUG=1
+GLUON_DEBUG=0
 CREATE_TIME=$(date '+%Y-%m-%d-%H-%M')
 
 # Beim Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
