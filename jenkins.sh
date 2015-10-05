@@ -20,8 +20,8 @@
 GLUON_URL=https://github.com/freifunk-gluon/gluon.git
 GLUON_COMMIT=v2015.1.2
 GLUON_VERSION=v2015.1.2
-GLUON_BRANCH=testing
-#GLUON_BRANCH=beta
+#GLUON_BRANCH=testing
+GLUON_BRANCH=beta
 #GLUON_BRANCH=stable
 GLUON_PRIORITY=0
 GLUON_DEBUG=0
