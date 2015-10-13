@@ -25,7 +25,10 @@ if [ ! -d "$WORKSPACE/gluon-$1" ]; then
 else
 	# Alte Images zuvor löschen
 	rm -rf $WORKSPACE/gluon-$1/images/*
-	JOBS='-j 8'
+	TEMP=$(nproc)
+	TEMP=$(expr $TEMP \* 2 + 1)
+	JOBS="-j $TEMP"
+	TEMP=""
 fi
 
 if [ $3 = 1 ]; then
