@@ -53,4 +53,7 @@ cd $WORKSPACE/gluon-$1
 make update GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$3 $5 $6 $7
 make clean GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$3 $5 $6 $7
 
+# Gesetztes SED entfernen, da es zu Problemen beim Builden kommt
+unset SED
+
 make GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$3 GLUON_BRANCH=$4 BROKEN=$GLUON_BROKEN $5 $6 $7
