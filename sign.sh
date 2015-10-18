@@ -22,18 +22,23 @@
 case "$3" in
 testing)
         GLUON_RELEASE=$6+$2-test
+        GLUON_BROKEN=1
         ;;
 experimental)
         GLUON_RELEASE=$6+$2-exp
+        GLUON_BROKEN=1
         ;;
 beta)
         GLUON_RELEASE=$6+$2-beta
+        GLUON_BROKEN=0
         ;;
 stable)
         GLUON_RELEASE=$6+$2-stable
+        GLUON_BROKEN=0
         ;;
 *)
         GLUON_RELEASE=$6+$2
+        GLUON_BROKEN=0
         ;;
 esac
 
@@ -47,7 +52,7 @@ fi
 cd $WORKSPACE/gluon-$1
 
 # Manifeste erstellen 
-make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$3 GLUON_PRIORITY=$5
+make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$3 GLUON_PRIORITY=$5 BROKEN=$GLUON_BROKEN
 #make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=beta GLUON_PRIORITY=1
 #make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=stable GLUON_PRIORITY=3
 
