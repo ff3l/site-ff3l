@@ -18,6 +18,7 @@
 #
 ###############################################################################################
 
+GLUON_BROKEN=0
 # Releasenummer der zu erstellenden Images
 case "$3" in
 testing)
