@@ -76,14 +76,15 @@ readarray TARGETS < ./targets
 
 for TARGET in ${TARGETS[@]}
 do
-#    echo "$TARGET"
-    cd $BUILD_DIR
-    make update GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$TARGET $JOBS V=s
-    make clean GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$TARGET $JOBS V=s
+    if [[ "$TARGET" != \#* ]]; then
+        cd $BUILD_DIR
+        make update GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$TARGET $JOBS V=s
+        make clean GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$TARGET $JOBS V=s
 
-    unset SED
-    make GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$TARGET GLUON_BRANCH=$GLUON_BRANCH BROKEN=$GLUON_BROKEN $JOBS V=s
-    letzterBefehlErfolgreich;
+        unset SED
+        make GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$TARGET GLUON_BRANCH=$GLUON_BRANCH BROKEN=$GLUON_BROKEN $JOBS V=s
+        letzterBefehlErfolgreich;
+    fi
 done
 
 # Wieder zurück wechseln
