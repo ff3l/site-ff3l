@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 ###############################################################################################
 # Buildscript zum manuellen Test des Builds auf dem Buildserver
@@ -19,4 +19,4 @@ export FF3L_BUILD_NUMBER=000
 # Jenkins Build-Konfiguration
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 chmod +x $WORKSPACE/jenkins.sh
-sh $WORKSPACE/jenkins.sh
+bash $WORKSPACE/jenkins.sh
