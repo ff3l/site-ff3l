@@ -34,3 +34,15 @@ msgstr ""
 "3 seconds during normal operation. The device will then reboot into config "
 "mode.</p>"
 "<p>Have fun with your node and exploring the Freifunk network!</p>"
+
+msgid "gluon-luci-node-role:role:node"
+msgstr "Normal node"
+
+msgid "gluon-luci-node-role:role:test"
+msgstr "Test node"
+
+msgid "gluon-luci-node-role:role:backbone"
+msgstr "Backbone node"
+
+msgid "gluon-luci-node-role:role:service"
+msgstr "Service node"
