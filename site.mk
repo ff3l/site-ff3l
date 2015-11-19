@@ -16,6 +16,7 @@ gluon-luci-autoupdater \
 gluon-luci-portconfig \
 gluon-luci-wifi-config \
 gluon-luci-private-wifi \
+gluon-luci-node-role \
 gluon-next-node \
 gluon-mesh-vpn-fastd \
 gluon-radvd \
