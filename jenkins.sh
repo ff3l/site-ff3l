@@ -66,6 +66,11 @@ mkdir $BUILD_DIR/site
 cp -r $WORKSPACE/site.mk $WORKSPACE/site.conf $WORKSPACE/i18n $BUILD_DIR/site
 letzterBefehlErfolgreich;
 
+if [ "$GLUON_BRANCH" = "master" ]; then
+        echo "cleaning"
+        make dirclean V=s
+	sleep 5
+fi
 # Wieder zurück wechseln
 cd $WORKSPACE
 
@@ -80,7 +85,6 @@ do
         cd $BUILD_DIR
         make update GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$TARGET $JOBS V=s
         make clean GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$TARGET $JOBS V=s
-
         unset SED
         make GLUON_RELEASE=$GLUON_RELEASE GLUON_TARGET=$TARGET GLUON_BRANCH=$GLUON_BRANCH BROKEN=$GLUON_BROKEN $JOBS V=s
         letzterBefehlErfolgreich;
@@ -92,11 +96,14 @@ cd $WORKSPACE
 
 cd $BUILD_DIR
 
+if [ "$GLUON_BRANCH" != "master" ]; then
 # Manifest erstellen
 make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$GLUON_BRANCH GLUON_PRIORITY=$GLUON_PRIORITY BROKEN=$GLUON_BROKEN
 
 # Manifest signieren
 sh contrib/sign.sh $JENKINS_HOME/gluon/signkeys/jenkins.key $IMAGE_DIR/sysupgrade/$GLUON_BRANCH.manifest
+
+fi
 
 # Aktuell erstellte Images werden in ein Archiv gespeichert
 cd $WORKSPACE
