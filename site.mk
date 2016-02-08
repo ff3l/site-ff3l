@@ -24,9 +24,10 @@ gluon-setup-mode \
 gluon-status-page \
 haveged \
 iptables \
-iwinfo \
+iwinfo 
 
 ifeq ($(GLUON_TARGET),x86-generic)
+	GLUON_SITE_PACKAGES := $(GLUON_SITE_PACKAGES) \
 	kmod-usb-core \
 	kmod-usb2 \
 	kmod-usb-hid \
@@ -34,6 +35,7 @@ ifeq ($(GLUON_TARGET),x86-generic)
 	kmod-usb-net-asix
 endif
 ifeq ($(GLUON_TARGET),x86-64)
+	GLUON_SITE_PACKAGES := $(GLUON_SITE_PACKAGES) \
 	kmod-usb-core \
 	kmod-usb2 \
 	kmod-usb-hid \
