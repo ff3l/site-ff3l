@@ -24,10 +24,26 @@ gluon-setup-mode \
 gluon-status-page \
 haveged \
 iptables \
-iwinfo
+iwinfo \
+
+ifeq ($(GLUON_TARGET),x86-generic)
+	kmod-usb-core \
+	kmod-usb2 \
+	kmod-usb-hid \
+	kmod-usb-net \
+	kmod-usb-net-asix
+endif
+ifeq ($(GLUON_TARGET),x86-64)
+	kmod-usb-core \
+	kmod-usb2 \
+	kmod-usb-hid \
+	kmod-usb-net \
+	kmod-usb-net-asix
+endif
 
 
-DEFAULT_GLUON_RELEASE := 2016.1~$(shell date '+%Y%m%d')-exp
+
+DEFAULT_GLUON_RELEASE := v2016.1+001-stable
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
