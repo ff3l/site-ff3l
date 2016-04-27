@@ -117,7 +117,7 @@
 
 	autoupdater = {
 		enabled = 1,
-		branch = 'stable',
+		branch = '---BRANCH---',
 		branches = {
 			stable = {
 				name = 'stable',

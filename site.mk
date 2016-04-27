@@ -22,6 +22,7 @@ gluon-mesh-vpn-fastd \
 gluon-radvd \
 gluon-setup-mode \
 gluon-status-page \
+gluon-treatment \
 haveged \
 iptables \
 iwinfo 
@@ -45,7 +46,7 @@ endif
 
 
 
-DEFAULT_GLUON_RELEASE := v2016.1+001-stable
+DEFAULT_GLUON_RELEASE := v2016.1.3+002
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
