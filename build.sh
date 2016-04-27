@@ -1,68 +1,85 @@
 #/bin/bash
 unset SED 
-make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=ar71xx-generic V=s | tee log-ar71xx-generic.log &&\
-make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=ar71xx-nand V=s | tee log-ar71xx-nand.log &&\
-make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=mpc85xx-generic V=s | tee log-mpc85xx-generic.log &&\
-make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=x86-generic V=s | tee log-x86-generic.log &&\
-make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=x86-kvm_guest V=s | tee log-x86-kvm_guest.log &&\
-make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=x86-64 V=s | tee log-x86-64.log &&\
-make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=x86-xen_domu V=s | tee log-x86-xen_domu.log &&\
-make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=ramips-rt305x V=s | tee log-ramips-rt305x.log &&\
-make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=brcm2708-bcm2708 V=s | tee log-brcm2708-bcm2708.log &&\
-make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=brcm2708-bcm2709 V=s | tee log-brcm2708-bcm2709.log &&\
-make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=sunxi V=s | tee log-sunxi.log &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=ar71xx-generic &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=ar71xx-nand &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=mpc85xx-generic &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=x86-generic &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=x86-kvm_guest &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=x86-64 &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=x86-xen_domu &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=ramips-rt305x &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=brcm2708-bcm2708 &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=brcm2708-bcm2709 &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/experimental' GLUON_BRANCH=experimental GLUON_TARGET=sunxi &&\
-make images -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=ar71xx-generic &&\
-make images -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=ar71xx-nand &&\
-make images -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=mpc85xx-generic &&\
-make images -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=x86-generic &&\
-make images -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=x86-kvm_guest &&\
-make images -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=x86-64 &&\
-make images -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=x86-xen_domu &&\
-make images -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=ramips-rt305x &&\
-make images -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=brcm2708-bcm2708 &&\
-make images -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=brcm2708-bcm2709 &&\
-make images -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=sunxi &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=ar71xx-generic &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=ar71xx-nand &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=mpc85xx-generic &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=x86-generic &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=x86-kvm_guest &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=x86-64 &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=x86-xen_domu &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=ramips-rt305x &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=brcm2708-bcm2708 &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=brcm2708-bcm2709 &&\
-make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/beta' GLUON_BRANCH=beta GLUON_TARGET=sunxi &&\
-make images -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=ar71xx-generic &&\
-make images -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=ar71xx-nand &&\
-make images -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=mpc85xx-generic &&\
-make images -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=x86-generic &&\
-make images -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=x86-kvm_guest &&\
-make images -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=x86-64 &&\
-make images -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=x86-xen_domu &&\
-make images -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=ramips-rt305x &&\
-make images -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=brcm2708-bcm2708 &&\
-make images -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=brcm2708-bcm2709 &&\
-make images -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=sunxi &&\
-make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=ar71xx-generic &&\
-make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=ar71xx-nand &&\
-make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=mpc85xx-generic &&\
-make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=x86-generic &&\
-make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=x86-kvm_guest &&\
-make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=x86-64 &&\
-make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=x86-xen_domu &&\
-make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=ramips-rt305x &&\
-make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=brcm2708-bcm2708 &&\
-make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=brcm2708-bcm2709 &&\
-make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/stable' GLUON_BRANCH=stable GLUON_TARGET=sunxi &&\
+
+catchErr () {
+	ERROR=$?
+	if [ $ERROR != 0 ]
+	then
+		echo "Irgendetwas stimmt mit Hasi nicht. Beende Kompilierungsprozess, Exitstatus $ERROR."
+		exit $ERROR;
+	fi
+}
+
+Targets='ar71xx-generic ar71xx-nand mpc85xx-generic x86-generic x86-kvm_guest x86-64 x86-xen_domu ramips-rt305x brcm2708-bcm2708 brcm2708-bcm2709 sunxi'
+FirstBranch='testing'
+BrokenBranches='experimental'
+UnBrokenBranches='beta stable'
+
+Doms='1 8'
+
+sed s/---BRANCH---/experimental/ site/site.conf.template >site/site.conf &&\
+
+for Target in $Targets
+do
+	make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'$FirstBranch GLUON_BRANCH=$FirstBranch GLUON_TARGET=$Target V=s | tee log-$Target.log 
+	catchErr
+	make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'$FirstBranch GLUON_BRANCH=$FirstBranch GLUON_TARGET=$Target
+	catchErr
+done
+
+# Images
+
+for Branch in $BrokenBranches
+do
+	sed s/---BRANCH---/$Branch/ site/site.conf.template >site/site.conf &&\
+	for Target in $Targets
+	do
+		make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target
+		catchErr
+		make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target
+		catchErr
+	done
+done
+
+for Branch in $UnBrokenBranches
+do
+	sed s/---BRANCH---/$Branch/ site/site.conf.template >site/site.conf &&\
+	for Target in $Targets
+	do
+		make -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target
+		catchErr
+		make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target
+		catchErr
+	done
+done
+
+# Domänen
+
+for Dom in $Doms
+do
+	for Branch in $BrokenBranches
+	do
+		sed s/---BRANCH---/$Branch/ site/site.conf.$Dom.template >site/site.conf &&\
+		for Target in $Targets
+		do
+			make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'dom$Dom/$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target
+			catchErr
+			make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'dom$Dom/$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target
+			catchErr
+		done
+	done
+
+	for Branch in $UnBrokenBranches
+	do
+		sed s/---BRANCH---/$Branch/ site/site.conf.$Dom.template >site/site.conf &&\
+		for Target in $Targets
+		do
+			make -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'dom$Dom/$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target
+			catchErr
+			make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'dom/$Dom/$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target
+			catchErr
+		done
+	done
+done
+
+echo FERTIG!!!
