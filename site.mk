@@ -46,7 +46,7 @@ endif
 
 
 
-DEFAULT_GLUON_RELEASE := v2016.1.3+003
+DEFAULT_GLUON_RELEASE := v2016.1.4+001
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
