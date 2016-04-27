@@ -57,7 +57,7 @@ done
 
 for Dom in $Doms
 do
-	for Branch in $BrokenBranches
+	for Branch in $FirstBranch $BrokenBranches
 	do
 		sed s/---BRANCH---/$Branch/ site/site.conf.$Dom.template >site/site.conf &&\
 		for Target in $Targets
