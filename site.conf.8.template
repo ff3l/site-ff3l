@@ -22,8 +22,8 @@
 			ssid = 'Freifunk',
 		},
 		ibss = {
-			ssid = '08:ca:ff:ee:ba:be',
-			bssid = '08:ca:ff:ee:ba:be',
+			ssid = '8a:ca:ff:ee:ba:be',
+			bssid = '8a:ca:ff:ee:ba:be',
 			mcast_rate = 12000,
 		},
 	},

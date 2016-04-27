@@ -22,8 +22,8 @@
 			ssid = '3laendereck.freifunk.net',
 		},
 		ibss = {
-			ssid = '02:ca:ff:ee:ba:be',
-			bssid = '02:ca:ff:ee:ba:be',
+			ssid = '2a:ca:ff:ee:ba:be',
+			bssid = '2a:ca:ff:ee:ba:be',
 			mcast_rate = 12000,
 		},
 	},
