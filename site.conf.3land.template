@@ -1,7 +1,7 @@
 {
-	hostname_prefix = 'ff3l-3-',
-	site_name = 'Freifunk 3Ländereck Domäne 3',
-	site_code = 'ff3l1',
+	hostname_prefix = '3land-',
+	site_name = 'Freifunk 3Ländereck Dreiland',
+	site_code = 'ff3l-3land',
 	opkg = {
 		openwrt = 'http://opkg.services.ff3l/%n/%v/%S/packages',
 		extra = {
@@ -9,8 +9,8 @@
 		},
 	},
 
-	prefix4 = '10.119.48.0/20',
-	prefix6 = 'fdc7:3c9d:ff31:3::/64',
+	prefix4 = '10.119.96.0/20',
+	prefix6 = 'fdc7:3c9d:ff31:6::/64',
 
 	timezone = 'CET-1CEST,M3.5.0,M10.5.0/3', -- Europe/Berlin
 	ntp_servers = {'ntp1.ff3l','ntp2.ff3l','ntp3.ff3l'},
@@ -19,29 +19,29 @@
 	wifi24 = {
 		channel = 1,
 		ap = {
-			ssid = '3laendereck.freifunk.net',
+			ssid = 'Freifunk',
 		},
 		ibss = {
-			ssid = '3a:ca:ff:ee:ba:be',
-			bssid = '3a:ca:ff:ee:ba:be',
+			ssid = '6a:ca:ff:ee:ba:be',
+			bssid = '6a:ca:ff:ee:ba:be',
 			mcast_rate = 12000,
 		},
 	},
 	wifi5 = {
 		channel = 44,
 		ap = {
-			ssid = '3laendereck.freifunk.net (5GHz)',
+			ssid = 'Freifunk (5GHz)',
 		},
 		ibss = {
-			ssid = '02:44:CA:FF:EE:03',
-			bssid = '02:44:CA:FF:EE:03',
+			ssid = '02:44:CA:FF:EE:06',
+			bssid = '02:44:CA:FF:EE:06',
 			mcast_rate = 12000,
 		},
 	},
 
 	next_node = {
-		ip4 = '10.119.48.1',
-		ip6 = 'fdc7:3c9d:ff31:3::1',
+		ip4 = '10.119.96.1',
+		ip6 = 'fdc7:3c9d:ff31:6::1',
 		mac = '16:41:95:40:f7:dc',
 	},
 
@@ -55,15 +55,15 @@
 				peers = {
 					vpn3 = {
 						key = '3ebcc2c53f590a9eac82eda7b0db0ac587f12c933d9e312e2910d1f9b303d5e1',
-						remotes = {'ipv4 "gw3.ff3l.net" port 10003'},
+						remotes = {'ipv4 "gw3.ff3l.net" port 10006'},
 					},
 					vpn7 = {
 						key = '1a727c779fc18e57a5be4c23585f1498c627861cafdadc189457208cc1709aad',
-						remotes = {'ipv4 "gw7.freifunk-3laendereck.net" port 10003'},
+						remotes = {'ipv4 "gw7.freifunk-3laendereck.net" port 10006'},
 					},
 					vpn9 = {
 						key = '2a0ac1405fb9e031a08111318bfaef968e06231d55437bd993d209d496d3ba94',
-						remotes = {'ipv4 "gw9.freifunk-3laendereck.net" port 10003'},
+						remotes = {'ipv4 "gw9.freifunk-3laendereck.net" port 10006'},
 					},
 				},
 			},
@@ -84,7 +84,7 @@
 		branches = {
 			stable = {
 				name = 'stable',
-				mirrors = {'http://upd1.dom3.ff3l/stable/sysupgrade','http://upd2.dom3.ff3l/stable/sysupgrade','http://upd3.dom3.ff3l/stable/sysupgrade','http://upd4.dom3.ff3l/stable/sysupgrade','http://upd.dom3.ff3l.net/stable/sysupgrade'},
+				mirrors = {'http://upd1.dom6.ff3l/stable/sysupgrade','http://upd2.dom6.ff3l/stable/sysupgrade','http://upd3.dom6.ff3l/stable/sysupgrade','http://upd4.dom6.ff3l/stable/sysupgrade','http://upd.dom6.ff3l.net/stable/sysupgrade'},
 				good_signatures = 2,
 				pubkeys = {
 					'52cbc7bdac35d8eda334f2d50537b1b1904f132757ca29e9493f15e9cb10086f', -- Bernd
@@ -95,7 +95,7 @@
 			},
 			beta = {
 				name = 'beta',
-				mirrors = {'http://upd1.dom3.ff3l/beta/sysupgrade','http://upd2.dom3.ff3l/beta/sysupgrade','http://upd3.dom3.ff3l/beta/sysupgrade','http://upd4.dom3.ff3l/beta/sysupgrade','http://upd.dom3.ff3l.net/beta/sysupgrade'},
+				mirrors = {'http://upd1.dom6.ff3l/beta/sysupgrade','http://upd2.dom6.ff3l/beta/sysupgrade','http://upd3.dom6.ff3l/beta/sysupgrade','http://upd4.dom6.ff3l/beta/sysupgrade','http://upd.dom6.ff3l.net/beta/sysupgrade'},
 				good_signatures = 2,
 				pubkeys = {
 					'52cbc7bdac35d8eda334f2d50537b1b1904f132757ca29e9493f15e9cb10086f', -- Bernd
@@ -106,7 +106,7 @@
 			},
 			experimental = {
 				name = 'experimental',
-				mirrors = {'http://upd1.dom3.ff3l/experimental/sysupgrade','http://upd2.dom3.ff3l/experimental/sysupgrade','http://upd3.dom3.ff3l/experimental/sysupgrade','http://upd4.dom3.ff3l/experimental/sysupgrade','http://upd.dom3.ff3l.net/experimental/sysupgrade'},
+				mirrors = {'http://upd1.dom6.ff3l/experimental/sysupgrade','http://upd2.dom6.ff3l/experimental/sysupgrade','http://upd3.dom6.ff3l/experimental/sysupgrade','http://upd4.dom6.ff3l/experimental/sysupgrade','http://upd.dom6.ff3l.net/experimental/sysupgrade'},
 				good_signatures = 1,
 				pubkeys = {
 					'52cbc7bdac35d8eda334f2d50537b1b1904f132757ca29e9493f15e9cb10086f', -- Bernd
@@ -118,7 +118,7 @@
 			},
 			 testing = {
                                 name = 'testing',
-                                mirrors = {'http://upd1.dom3.ff3l/testing/sysupgrade','http://upd2.dom3.ff3l/testing/sysupgrade','http://upd3.dom3.ff3l/testing/sysupgrade','http://upd4.dom3.ff3l/testing/sysupgrade','http://upd.dom3.ff3l.net/testing/sysupgrade'},
+                                mirrors = {'http://upd1.dom6.ff3l/testing/sysupgrade','http://upd2.dom6.ff3l/testing/sysupgrade','http://upd3.dom6.ff3l/testing/sysupgrade','http://upd4.dom6.ff3l/testing/sysupgrade','http://upd.dom6.ff3l.net/testing/sysupgrade'},
                                 good_signatures = 1,
                                 pubkeys = {
                                         '52cbc7bdac35d8eda334f2d50537b1b1904f132757ca29e9493f15e9cb10086f', -- Bernd

@@ -22,7 +22,7 @@
 	wifi24 = {
 		channel = 1,
 		ap = {
-			ssid = '3laendereck.freifunk.net',
+			ssid = 'Freifunk',
 		},
 		ibss = {
 			ssid = '12:ca:ff:ee:ba:be',
@@ -37,7 +37,7 @@
 	wifi5 = {
 		channel = 44,
 		ap = {
-			ssid = '3laendereck.freifunk.net (5GHz)',
+			ssid = 'Freifunk (5GHz)',
 		},
 		ibss = {
 			ssid = '02:44:CA:FF:EE:EE',

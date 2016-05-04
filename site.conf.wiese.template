@@ -1,7 +1,7 @@
 {
-	hostname_prefix = 'ff3l-4-',
-	site_name = 'Freifunk 3Ländereck Domäne 4',
-	site_code = 'ff3l1',
+	hostname_prefix = 'wiese-',
+	site_name = 'Freifunk 3Ländereck Schopfheim-Wiesental',
+	site_code = 'ff3l-wiese',
 	opkg = {
 		openwrt = 'http://opkg.services.ff3l/%n/%v/%S/packages',
 		extra = {
@@ -19,7 +19,7 @@
 	wifi24 = {
 		channel = 1,
 		ap = {
-			ssid = '3laendereck.freifunk.net',
+			ssid = 'Freifunk',
 		},
 		ibss = {
 			ssid = '4a:ca:ff:ee:ba:be',
@@ -30,7 +30,7 @@
 	wifi5 = {
 		channel = 44,
 		ap = {
-			ssid = '3laendereck.freifunk.net (5GHz)',
+			ssid = 'Freifunk (5GHz)',
 		},
 		ibss = {
 			ssid = '02:44:CA:FF:EE:04',

@@ -15,7 +15,7 @@ Targets='ar71xx-generic ar71xx-nand mpc85xx-generic x86-generic x86-kvm_guest x8
 BrokenBranches='testing experimental'
 UnBrokenBranches='beta stable'
 
-Doms='1 8'
+Doms='hoho wtk wald wiese loe 3land ref test'
 
 
 for Branch in $BrokenBranches
@@ -24,7 +24,7 @@ do
 	for Target in $Targets
 	do
 		echo -ne "\033]0;Main: $Branch $Target\007"
-		make images -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target
+		make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target
 		catchErr
 	done
 	echo -ne "\033]0;Main: $Branch Manifest\007"
@@ -38,7 +38,7 @@ do
 	for Target in $Targets
 	do
 		echo -ne "\033]0;Main: $Branch $Target\007"
-		make images -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target
+		make -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target
 		catchErr
 	done
 	echo -ne "\033]0;Main: $Branch Manifest\007"
@@ -56,11 +56,11 @@ do
 		for Target in $Targets
 		do
 			echo -ne "\033]0;$Dom: $Branch $Target\007"
-			make images -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'dom$Dom/$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target
+			make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'$Dom/$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target
 			catchErr
 		done
 		echo -ne "\033]0;$Dom: $Branch Manifest\007"
-		make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'dom$Dom/$Branch GLUON_BRANCH=$Branch
+		make manifest -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'$Dom/$Branch GLUON_BRANCH=$Branch
 		catchErr
 	done
 
@@ -70,11 +70,11 @@ do
 		for Target in $Targets
 		do
 			echo -ne "\033]0;$Dom: $Branch $Target\007"
-			make images -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'dom$Dom/$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target
+			make -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'$Dom/$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target
 			catchErr
 		done
 		echo -ne "\033]0;$Dom: $Branch Manifest\007"
-		make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'dom/$Dom/$Branch GLUON_BRANCH=$Branch
+		make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'$Dom/$Branch GLUON_BRANCH=$Branch
 		catchErr
 	done
 done
