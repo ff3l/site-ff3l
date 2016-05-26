@@ -22,6 +22,7 @@ gluon-mesh-vpn-fastd \
 gluon-radvd \
 gluon-setup-mode \
 gluon-status-page \
+gluon-treatment \
 haveged \
 iptables \
 iwinfo 
