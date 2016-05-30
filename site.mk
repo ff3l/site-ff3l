@@ -45,7 +45,7 @@ endif
 
 
 
-DEFAULT_GLUON_RELEASE := v2016.1.5~$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := 2016.1.5~$(shell date '+%Y%m%d')
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
