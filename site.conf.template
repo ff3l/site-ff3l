@@ -22,7 +22,7 @@
 	wifi24 = {
 		channel = 1,
 		ap = {
-			ssid = '3laendereck.freifunk.net',
+			ssid = 'Freifunk',
 		},
 		ibss = {
 			ssid = '12:ca:ff:ee:ba:be',
