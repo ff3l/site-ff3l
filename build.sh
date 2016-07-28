@@ -11,10 +11,10 @@ catchErr () {
 }
 
 #Targets='ar71xx-generic ar71xx-nand mpc85xx-generic x86-generic x86-kvm_guest x86-64 x86-xen_domu ramips-rt305x brcm2708-bcm2708 brcm2708-bcm2709 sunxi'
-Targets='ar71xx-generic ar71xx-nand mpc85xx-generic x86-generic x86-kvm_guest x86-64'
+Targets='ar71xx-generic ar71xx-nand mpc85xx-generic x86-generic x86-kvm_guest x86-64 x86-xen_domu'
 BrokenBranches='testing experimental'
 UnBrokenBranches='beta stable'
-Ver='v2016.1.5+001'
+Ver='v2016.1.5+006'
 
 Doms='hoho wtk wald wiese loe 3land ref test'
 
@@ -46,7 +46,7 @@ do
 	make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'$Branch GLUON_BRANCH=$Branch GLUON_RELEASE=$Ver
 	catchErr
 done
-
+exit 0
 # Domänen
 
 for Dom in $Doms

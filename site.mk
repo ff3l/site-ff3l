@@ -24,7 +24,8 @@ gluon-setup-mode \
 gluon-status-page \
 haveged \
 iptables \
-iwinfo 
+iwinfo \
+gluon-wifi-unhang
 
 ifeq ($(GLUON_TARGET),x86-generic)
 	GLUON_SITE_PACKAGES := $(GLUON_SITE_PACKAGES) \

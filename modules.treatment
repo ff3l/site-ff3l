@@ -1,0 +1,4 @@
+GLUON_SITE_FEEDS='treatment'
+PACKAGES_TREATMENT_REPO=https://github.com/ff3l/gluon-treatment.git
+PACKAGES_TREATMENT_COMMIT=3ac374eea3e61b375c7f23f4e3cfe95e61dfa612
+PACKAGES_TREATMENT_BRANCH=master
