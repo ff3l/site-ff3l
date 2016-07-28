@@ -154,4 +154,6 @@
   -- setup_mode = {
   --  skip = true,
   -- },
+
+  authorized_keys = { 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAJG+/kmJSbHaGLFLcQH+KaQZuN+0Vh3b4M6oU71xxVbH2vYuKR8IBtRQ6cfpk7ryN3ZDejwGfLQnRyszx01uue9we7b2hQebjxDFnj5YnJc4n5osIoBf6vg/QS0WkoGVyRk1FBvRf+Wk7mEOGM5Jrsp6iubs8KJfDY1GqHCSggy0yI1PvzicT1Tk2MklGzhwah3MUADkq1CJteGuAlZ7/YVL2D2aedXeqjLjwbx+LbdFKl+ei6B1eR7zyaDCdghFJeOzW1v76d7B/yUrNvxCFCKCyHcY+0Eqef/RJsX8y0IyUxZQR/3c6u2l52SbjSfr+sJHvF4P7t5aZzz/sjoGB ff3l-ref' },
 }
