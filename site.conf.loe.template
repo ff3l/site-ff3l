@@ -125,9 +125,9 @@
                                         '62025a10319278b2daec696889acacd0f0e935b491eb797e8fa5a272e3902c05', -- kpanic
 				},
 			},
-			 testing = {
-                                name = 'testing',
-                                mirrors = {'http://upd1.dom5.ff3l/testing/sysupgrade','http://upd2.dom5.ff3l/testing/sysupgrade','http://upd3.dom5.ff3l/testing/sysupgrade','http://upd4.dom5.ff3l/testing/sysupgrade','http://upd.dom5.ff3l.net/testing/sysupgrade'},
+			 ipv6 = {
+                                name = 'ipv6',
+                                mirrors = {'http://upd1.dom5.ff3l/ipv6/sysupgrade','http://upd2.dom5.ff3l/ipv6/sysupgrade','http://upd3.dom5.ff3l/ipv6/sysupgrade','http://upd4.dom5.ff3l/ipv6/sysupgrade','http://upd.dom5.ff3l.net/ipv6/sysupgrade'},
                                 good_signatures = 1,
                                 pubkeys = {
                                         '2623850bdd87944daea05533ab5fe33878f322932c2890bdc876859d2300b412', -- Jenkins

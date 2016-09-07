@@ -23,7 +23,11 @@ msgstr ""
 "sur les serveur Mesh-VPN de votre groupe Freifunk. Veuillez envoyer la clé avec le "
 "nom de votre nœud. "
 "(<em><%=hostname%></em>) à "
+<<<<<<< HEAD
 "<a href=\"mailto:knoten@ff3l.fr\">knoten@ff3l.fr</a>."
+=======
+"<a href=\"mailto:knoten@freifunk-3pays.fr\">knoten@freifunk-3pays.fr</a>."
+>>>>>>> 2d168e1f3d31f1c2735806c20e84a59f974a15cc
 "</p>"
 "<div class=\"the-key\">"
 " # <%= hostname %>"
