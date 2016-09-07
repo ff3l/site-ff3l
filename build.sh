@@ -12,9 +12,9 @@ catchErr () {
 
 #Targets='ar71xx-generic ar71xx-nand mpc85xx-generic x86-generic x86-kvm_guest x86-64 x86-xen_domu ramips-rt305x brcm2708-bcm2708 brcm2708-bcm2709 sunxi'
 Targets='ar71xx-generic ar71xx-nand mpc85xx-generic x86-generic x86-kvm_guest x86-64 x86-xen_domu'
-BrokenBranches='testing experimental'
-UnBrokenBranches='beta stable'
-Ver='v2016.1.5+006'
+BrokenBranches='ipv6 experimental'
+UnBrokenBranches='stable'
+Ver='v2016.1.6+001'
 
 Doms='hoho wtk wald wiese loe 3land ref test'
 
@@ -36,6 +36,10 @@ done
 for Branch in $UnBrokenBranches
 do
 	sed s/---BRANCH---/$Branch/ site/site.conf.template >site/site.conf &&\
+	if [ $Branch == ipv6 ]
+	then
+		sed s/\'ipv4\ /\'ipv6\ / site/site.conf
+	fi
 	for Target in $Targets
 	do
 		echo -ne "\033]0;Main: $Branch $Target\007"
@@ -46,7 +50,6 @@ do
 	make manifest -j17 BROKEN=0 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/'$Branch GLUON_BRANCH=$Branch GLUON_RELEASE=$Ver
 	catchErr
 done
-exit 0
 # Domänen
 
 for Dom in $Doms
@@ -54,6 +57,10 @@ do
 	for Branch in $BrokenBranches
 	do
 		sed s/---BRANCH---/$Branch/ site/site.conf.$Dom.template >site/site.conf &&\
+		if [ $Branch == ipv6 ]
+		then
+			sed s/\'ipv4\ /\'ipv6\ / site/site.conf
+		fi
 		for Target in $Targets
 		do
 			echo -ne "\033]0;$Dom: $Branch $Target\007"

@@ -44,7 +44,7 @@ ifeq ($(GLUON_TARGET),x86-64)
 	kmod-usb-net-asix
 endif
 
-
+GLUON_REGION ?= eu
 
 DEFAULT_GLUON_RELEASE := 2016.1.5~$(shell date '+%Y%m%d')
 
