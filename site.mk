@@ -25,7 +25,7 @@ gluon-status-page \
 haveged \
 iptables \
 iwinfo \
-gluon-wifiunhang
+#gluon-wifiunhang
 
 ifeq ($(GLUON_TARGET),x86-generic)
 	GLUON_SITE_PACKAGES := $(GLUON_SITE_PACKAGES) \
@@ -46,7 +46,9 @@ endif
 
 GLUON_REGION ?= eu
 
-DEFAULT_GLUON_RELEASE := 2016.1.5~$(shell date '+%Y%m%d')
+GLUON_ATH10K_MESH ?= ibss
+
+DEFAULT_GLUON_RELEASE := 2016.2~$(shell date '+%Y%m%d')
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)

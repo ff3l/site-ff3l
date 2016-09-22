@@ -154,4 +154,9 @@
   -- setup_mode = {
   --  skip = true,
   -- },
+  mesh = {
+    batman_adv = {
+      gw_sel_class = 3,
+    },
+  } 
 }
