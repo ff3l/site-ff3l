@@ -50,7 +50,7 @@ GLUON_REGION ?= eu
 
 GLUON_ATH10K_MESH ?= ibss
 
-DEFAULT_GLUON_RELEASE := 2016.2.1~$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := 2016.3~$(shell date '+%Y%m%d')
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)

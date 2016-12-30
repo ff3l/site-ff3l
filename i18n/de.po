@@ -54,3 +54,11 @@ msgstr "Backbone-Knoten"
 
 msgid "gluon-luci-node-role:role:service"
 msgstr "Service-Knoten"
+
+msgid "gluon-config-mode:altitude-label"
+msgstr "Höhe"
+
+msgid "gluon-config-mode:altitude-help"
+msgstr ""
+"Die Höhenangabe ist optional und sollte nur gesetzt werden, wenn ein "
+"exakter Wert bekannt ist."

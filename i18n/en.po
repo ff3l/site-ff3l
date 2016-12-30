@@ -51,3 +51,11 @@ msgstr "Backbone node"
 
 msgid "gluon-luci-node-role:role:service"
 msgstr "Service node"
+
+msgid "gluon-config-mode:altitude-label"
+msgstr "Altitude"
+
+msgid "gluon-config-mode:altitude-help"
+msgstr ""
+"Specifying the altitude is optional and should only be done if a proper "
+"value is known."
