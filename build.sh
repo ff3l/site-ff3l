@@ -14,7 +14,7 @@ catchErr () {
 Targets='ar71xx-generic ar71xx-nand ar71xx-mikrotik mpc85xx-generic x86-generic x86-kvm_guest x86-64 x86-xen_domu'
 BrokenBranches='ipv6 experimental'
 UnBrokenBranches='stable'
-Ver='v2016.2+001'
+Ver='v2016.2.3+001'
 
 Doms='hoho wtk wald wiese loe 3land ref test'
 
@@ -25,7 +25,7 @@ do
 	for Target in $Targets
 	do
 		echo -ne "\033]0;Main: $Branch $Target\007"
-		make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/gluon/'$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target GLUON_RELEASE=$Ver
+		make -j17 BROKEN=1 GLUON_IMAGEDIR='$(GLUON_OUTPUTDIR)/gluon/'$Branch GLUON_BRANCH=$Branch GLUON_TARGET=$Target GLUON_RELEASE=$Ver V=s -Otarget
 		catchErr
 	done
 	echo -ne "\033]0;Main: $Branch Manifest\007"
@@ -38,7 +38,7 @@ do
 	sed s/---BRANCH---/$Branch/ site/site.conf.template >site/site.conf &&\
 	if [ $Branch == ipv6 ]
 	then
-		sed s/\'ipv4\ /\'ipv6\ / site/site.conf
+		sed -i s/\'ipv4\ /\'ipv6\ / site/site.conf
 	fi
 	for Target in $Targets
 	do
@@ -59,7 +59,7 @@ do
 		sed s/---BRANCH---/$Branch/ site/site.conf.$Dom.template >site/site.conf &&\
 		if [ $Branch == ipv6 ]
 		then
-			sed s/\'ipv4\ /\'ipv6\ / site/site.conf
+			sed -i s/\'ipv4\ /\'ipv6\ / site/site.conf
 		fi
 		for Target in $Targets
 		do

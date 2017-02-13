@@ -26,6 +26,10 @@
 			bssid = '6a:ca:ff:ee:ba:be',
 			mcast_rate = 12000,
 		},
+		mesh = {
+			id = 'ff3l-3land-mesh',
+			mcast_rate = 12000,
+		},
 	},
 	wifi5 = {
 		channel = 44,
@@ -35,6 +39,10 @@
 		ibss = {
 			ssid = '02:44:CA:FF:EE:06',
 			bssid = '02:44:CA:FF:EE:06',
+			mcast_rate = 12000,
+		},
+		mesh = {
+			id = 'ff3l-3land-mesh',
 			mcast_rate = 12000,
 		},
 	},
