@@ -26,6 +26,10 @@
 			bssid = '2a:ca:ff:ee:ba:be',
 			mcast_rate = 12000,
 		},
+                mesh = {
+                        id = 'ff3l-wtk-mesh',
+                        mcast_rate = 12000,
+                },
 	},
 	wifi5 = {
 		channel = 44,
@@ -37,6 +41,11 @@
 			bssid = '02:44:CA:FF:EE:02',
 			mcast_rate = 12000,
 		},
+                mesh = {
+                        id = 'ff3l-wtk-mesh',
+                        mcast_rate = 12000,
+                },
+
 	},
 
 	next_node = {
