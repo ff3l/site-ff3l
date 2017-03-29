@@ -35,7 +35,8 @@ ifeq ($(GLUON_TARGET),x86-generic)
 	kmod-usb2 \
 	kmod-usb-hid \
 	kmod-usb-net \
-	kmod-usb-net-asix
+	kmod-usb-net-asix \
+	kmod-acpi-button
 endif
 ifeq ($(GLUON_TARGET),x86-64)
 	GLUON_SITE_PACKAGES := $(GLUON_SITE_PACKAGES) \
@@ -43,7 +44,8 @@ ifeq ($(GLUON_TARGET),x86-64)
 	kmod-usb2 \
 	kmod-usb-hid \
 	kmod-usb-net \
-	kmod-usb-net-asix
+	kmod-usb-net-asix \
+	kmod-acpi-button
 endif
 
 GLUON_REGION ?= eu
