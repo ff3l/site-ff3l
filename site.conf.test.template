@@ -21,11 +21,6 @@
 		ap = {
 			ssid = 'Freifunk',
 		},
-		ibss = {
-			ssid = '8a:ca:ff:ee:ba:be',
-			bssid = '8a:ca:ff:ee:ba:be',
-			mcast_rate = 12000,
-		},
                 mesh = {
                         id = 'ff3l-test-mesh',
                         mcast_rate = 12000,
@@ -36,11 +31,6 @@
 		channel = 44,
 		ap = {
 			ssid = 'Freifunk (5GHz)',
-		},
-		ibss = {
-			ssid = '02:44:CA:FF:EE:08',
-			bssid = '02:44:CA:FF:EE:08',
-			mcast_rate = 12000,
 		},
                 mesh = {
                         id = 'ff3l-test-mesh',
