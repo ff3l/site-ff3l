@@ -1,6 +1,5 @@
 GLUON_SITE_PACKAGES := \
 gluon-mesh-batman-adv-15 \
-gluon-alfred \
 gluon-respondd \
 gluon-autoupdater \
 gluon-config-mode-autoupdater \
@@ -11,13 +10,12 @@ gluon-config-mode-hostname \
 gluon-config-mode-mesh-vpn \
 gluon-ebtables-filter-multicast \
 gluon-ebtables-filter-ra-dhcp \
-gluon-ebtables-segment-mld \
-gluon-luci-admin \
-gluon-luci-autoupdater \
-gluon-luci-portconfig \
-gluon-luci-wifi-config \
-gluon-luci-private-wifi \
-gluon-luci-node-role \
+gluon-web-admin \
+gluon-web-autoupdater \
+gluon-web-network \
+gluon-web-private-wifi \
+gluon-web-wifi-config \
+gluon-neighbour-info \
 gluon-mesh-vpn-fastd \
 gluon-radvd \
 gluon-setup-mode \
@@ -50,9 +48,9 @@ endif
 
 GLUON_REGION ?= eu
 
-GLUON_ATH10K_MESH ?= ibss
+GLUON_ATH10K_MESH ?= 11s
 
-DEFAULT_GLUON_RELEASE := 2016.3~$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := gluon-$(shell git -C $(GLUONDIR) log --pretty=format:'%h' -n 1)+site-$(shell git -C $(GLUONDIR)/site log --pretty=format:'%h' -n 1)~$(shell date '+%Y%m%d')
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
