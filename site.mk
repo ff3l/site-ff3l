@@ -47,7 +47,7 @@ GLUON_REGION ?= eu
 
 GLUON_ATH10K_MESH ?= 11s
 
-DEFAULT_GLUON_RELEASE := gluon-$(shell git -C $(GLUONDIR) log --pretty=format:'%h' -n 1)+site-$(shell git -C $(GLUONDIR)/site log --pretty=format:'%h' -n 1)~$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := g$(shell git -C $(shell pwd) log --pretty=format:'%h' -n 1)+s$(shell git -C $(shell pwd)/site log --pretty=format:'%h' -n 1)~$(shell date '+%Y%m%d')
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
