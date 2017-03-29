@@ -5,7 +5,7 @@
 	opkg = {
 		openwrt = 'http://opkg.services.ff3l/%n/%v/%S/packages',
 		extra = {
-			modules = 'http://opkg.services.ff3l/modules/gluon-%GS-%GR/%S',
+			modules = 'http://opkg.services.ff3l/modules/gluon-ff3l-%GR/%S',
 		},
 	},
 
