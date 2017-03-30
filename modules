@@ -1,4 +1,4 @@
 GLUON_SITE_FEEDS='ff3l'
-PACKAGES_FFMWU_REPO=https://github.com/ff3l/packages.git
-PACKAGES_FFMWU_BRANCH=master
-PACKAGES_FFMWU_COMMIT=0fca1d8fa0fa9d73719b30339f5ecaffc15f408e
+PACKAGES_FF3L_REPO=https://github.com/ff3l/packages.git
+PACKAGES_FF3L_BRANCH=master
+PACKAGES_FF3L_COMMIT=0fca1d8fa0fa9d73719b30339f5ecaffc15f408e
