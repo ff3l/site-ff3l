@@ -15,7 +15,6 @@ gluon-web-autoupdater \
 gluon-web-network \
 gluon-web-private-wifi \
 gluon-web-wifi-config \
-gluon-neighbour-info \
 gluon-mesh-vpn-fastd \
 gluon-radvd \
 gluon-setup-mode \
