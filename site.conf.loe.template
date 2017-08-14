@@ -46,7 +46,7 @@
 	mesh_vpn = {
 		
 		enabled = false,
-        mtu = 1426,
+        mtu = 1398,
         fastd = {
             methods = {'salsa2012+umac', 'salsa2012+gmac'},
             groups = {
