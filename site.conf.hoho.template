@@ -21,11 +21,6 @@
 		ap = {
 			ssid = 'Freifunk',
 		},
-		ibss = {
-			ssid = '1a:ca:ff:ee:ba:be',
-			bssid = '1a:ca:ff:ee:ba:be',
-			mcast_rate = 12000,
-		},
                 mesh = {
                         id = 'ff3l-hoho-mesh',
                         mcast_rate = 12000,
@@ -35,11 +30,6 @@
 		channel = 44,
 		ap = {
 			ssid = 'Freifunk (5GHz)',
-		},
-		ibss = {
-			ssid = '02:44:CA:FF:EE:01',
-			bssid = '02:44:CA:FF:EE:01',
-			mcast_rate = 12000,
 		},
                 mesh = {
                         id = 'ff3l-hoho-mesh',
@@ -57,7 +47,7 @@
 	fastd_mesh_vpn = {
 		methods = {'salsa2012+umac', 'salsa2012+gmac'},
 		enabled = false,
-		mtu = 1426,
+		mtu = 1398,
 		groups = {
 			backbone = {
 				limit = 1,
