@@ -1,7 +1,7 @@
 {
-	hostname_prefix = 'ffnsg-',
+	hostname_prefix = 'ffng-',
 	site_name = 'Freifunk Nordschwarzwald-Gäu',
-	site_code = 'ff3l-nsg',
+	site_code = 'ff3l-ng',
 	opkg = {
 		openwrt = 'http://opkg.services.ff3l/%n/%v/%S/packages',
 		extra = {
@@ -22,7 +22,7 @@
 			ssid = 'Freifunk',
 		},
                 mesh = {
-                        id = 'ff3l-nsg-mesh',
+                        id = 'ff3l-ng-mesh',
                         mcast_rate = 12000,
                 },
 
@@ -33,7 +33,7 @@
 			ssid = 'Freifunk (5GHz)',
 		},
                 mesh = {
-                        id = 'ff3l-nsg-mesh',
+                        id = 'ff3l-ng-mesh',
                         mcast_rate = 12000,
                 },
 	},
