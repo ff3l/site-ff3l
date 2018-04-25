@@ -10,7 +10,6 @@ gluon-config-mode-hostname \
 gluon-config-mode-mesh-vpn \
 gluon-ebtables-filter-multicast \
 gluon-ebtables-filter-ra-dhcp \
-gluon-ebtables-segment-mld \
 gluon-ebtables-source-filter \
 gluon-web-admin \
 gluon-web-autoupdater \
