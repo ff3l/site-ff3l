@@ -3,7 +3,6 @@ GLUON_FEATURES := \
 	autoupdater \
 	ebtables-filter-multicast \
 	ebtables-filter-ra-dhcp \
-	ebtables-segment-mld \
 	ebtables-source-filter \
 	mesh-batman-adv-15 \
 	mesh-vpn-fastd \
@@ -60,7 +59,6 @@ NO_USB_PKGS_SERIAL := \
 USB_PKGS_STORAGE := \
 	block-mount \
 	blkid \
-	kmod-fs-exfat \
 	kmod-fs-ext4 \
 	kmod-fs-ntfs \
 	kmod-fs-vfat \
@@ -82,7 +80,6 @@ USB_PKGS_STORAGE := \
 NO_USB_PKGS_STORAGE := \
 	-block-mount \
 	-blkid \
-	-kmod-fs-exfat \
 	-kmod-fs-ext4 \
 	-kmod-fs-ntfs \
 	-kmod-fs-vfat \
