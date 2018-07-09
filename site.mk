@@ -25,7 +25,8 @@ gluon-status-page \
 haveged \
 iptables \
 iwinfo \
-ipv6-to-stable
+ipv6-to-stable \
+site2domain
 
 ifeq ($(GLUON_TARGET),x86-generic)
 	GLUON_SITE_PACKAGES := $(GLUON_SITE_PACKAGES) \
@@ -35,7 +36,7 @@ ifeq ($(GLUON_TARGET),x86-generic)
 	kmod-usb-net \
 	kmod-usb-net-asix \
 	kmod-ath \
-	kmod-atk9k \
+	kmod-ath9k \
 	kmod-ath9k-common \
 	kmod-mac80211
 endif
@@ -47,7 +48,7 @@ ifeq ($(GLUON_TARGET),x86-64)
 	kmod-usb-net \
 	kmod-usb-net-asix \
 	kmod-ath \
-	kmod-atk9k \
+	kmod-ath9k \
 	kmod-ath9k-common \
 	kmod-mac80211
 endif
