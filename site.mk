@@ -3,7 +3,6 @@ GLUON_FEATURES := \
 	autoupdater \
 	ebtables-filter-multicast \
 	ebtables-filter-ra-dhcp \
-	ebtables-segment-mld \
 	ebtables-source-filter \
 	mesh-batman-adv-15 \
 	mesh-vpn-fastd \
@@ -134,8 +133,11 @@ NO_USB_PKGS_NET := \
 
 # PCI-Express Network
 PCIE_PACKAGES_NET := \
-	kmod-bnx2
-
+	kmod-bnx2 \
+	kmod-ath \
+	kmod-ath9k \
+	kmod-ath9k-common \
+	kmod-mac80211
 
 # Group previous package sets
 USB_PKGS_WITHOUT_HID := \
