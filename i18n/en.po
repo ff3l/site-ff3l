@@ -15,6 +15,16 @@ msgstr ""
 "Welcome to the setup wizard of your new Freifunk Dreiländereck node. "
 "Please fill out the following form and submit it."
 
+msgid "gluon-config-mode:domain"
+msgstr "Domain"
+
+msgid "gluon-config-mode:domain-select"
+msgstr ""
+"Here you have the possibility of selecting the mesh domain in which your node "
+"is placed. Please keep in mind that your router only connects with the nodes "
+"of the selected domain"
+
+
 msgid "gluon-config-mode:pubkey"
 msgstr ""
 "<p>This is your Freifunk node's public key. The node won't be able to "
@@ -54,3 +64,21 @@ msgid "gluon-config-mode:altitude-help"
 msgstr ""
 "Specifying the altitude is optional and should only be done if a proper "
 "value is known."
+
+# Leave empty to use the default text, which can be found in:
+# package/gluon-config-mode-hostname/i18n/
+msgid "gluon-config-mode:hostname-help"
+msgstr ""
+
+# Leave empty to use the default text, which can be found in:
+# package/gluon-config-mode-geo-location/i18n/
+msgid "gluon-config-mode:geo-location-help"
+msgstr ""
+
+# Leave empty to use the default text, which can be found in:
+# package/gluon-config-mode-contact-info/i18n/
+msgid "gluon-config-mode:contact-help"
+msgstr ""
+
+msgid "gluon-config-mode:contact-note"
+msgstr ""

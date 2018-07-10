@@ -16,6 +16,15 @@ msgstr ""
 "Freifunk 3-pays. Remplissez le formulaire suivant en fonction de vos besoins "
 "et enregistrez le"
 
+msgid "gluon-config-mode:domain"
+msgstr "Domaine"
+
+msgid "gluon-config-mode:domain-select"
+msgstr ""
+"Ici vous avez la possibilité de sélectionner le domaine de maillage dans lequel "
+"votre nœud est placé. S'il vous plaît garder à l'esprit que votre routeur se "
+"connecte uniquement avec les nœuds du domaine sélectionné"
+
 msgid "gluon-config-mode:pubkey"
 msgstr ""
 "<p>Ceci est la clé publique de votre nœud Freifunk. Seulment après que la clé soit "
@@ -56,3 +65,21 @@ msgid "gluon-config-mode:altitude-help"
 msgstr ""
 "La altitude est optionelle et ne devrait que être ajoutée si la valeur "
 "exacte est connue."
+
+# Leave empty to use the default text, which can be found in:
+# package/gluon-config-mode-hostname/i18n/
+msgid "gluon-config-mode:hostname-help"
+msgstr ""
+
+# Leave empty to use the default text, which can be found in:
+# package/gluon-config-mode-geo-location/i18n/
+msgid "gluon-config-mode:geo-location-help"
+msgstr ""
+
+# Leave empty to use the default text, which can be found in:
+# package/gluon-config-mode-contact-info/i18n/
+msgid "gluon-config-mode:contact-help"
+msgstr ""
+
+msgid "gluon-config-mode:contact-note"
+msgstr ""
