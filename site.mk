@@ -20,7 +20,9 @@ gluon-radv-filterd \
 haveged \
 iwinfo \
 -gluon-web-mesh-vpn-fastd \
-respondd-module-airtime
+respondd-module-airtime \
+gluon-segment-mover \
+gluon-config-mode-segment-mover
 
 GLUON_REGION ?= eu
 
