@@ -24,7 +24,10 @@ iwinfo \
 respondd-module-airtime \
 gluon-ssid-changer \
 gluon-segment-mover \
-gluon-config-mode-segment-mover
+gluon-config-mode-segment-mover \
+addrefkey
+
+GLUON_DEPRECATED ?= upgrade
 
 GLUON_REGION ?= eu
 
