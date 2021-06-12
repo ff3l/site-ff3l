@@ -1,4 +1,22 @@
+# This file allows specifying additional repositories to use
+# when building gluon.
+#
+# In most cases, it is not required so don't add it.
+
+##	GLUON_SITE_FEEDS
+#		for each feed name given, add the corresponding PACKAGES_* lines
+#		documented below
 GLUON_SITE_FEEDS='ff3l'
+
+##	PACKAGES_$feedname_REPO
+#		the  git repository from where to clone the package feed
 PACKAGES_FF3L_REPO=https://github.com/ff3l/packages.git
-PACKAGES_FF3L_BRANCH=master
+
+
+##	PACKAGES_$feedname_COMMIT
+#		the version/commit of the git repository to clone
 PACKAGES_FF3L_COMMIT=0b99e355945d6a242203a52c2ab8675d424d5afa
+
+##  PACKAGES_$feedname_BRANCH
+#   the branch to check out
+PACKAGES_FF3L_BRANCH=master
