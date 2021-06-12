@@ -72,7 +72,7 @@ msgstr ""
 
 msgid "gluon-config-mode:reboot"
 msgstr ""
-"<p>For more information about the Freifunk community on Alpha Centauri, have a "
+"<p>For more information about the Freifunk Dreiländereck community, have a "
 "look at <a href=\"https://freifunk-3laendereck.net/\" target=\"_blank\">our "
 "homepage</a>.</p>"
 "<p>To get back to this configuration interface, press the reset button for "
