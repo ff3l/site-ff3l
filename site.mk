@@ -294,6 +294,10 @@ ifeq ($(GLUON_TARGET),x86-64)
 	GLUON_SITE_PACKAGES += $(USB_PKGS) $(PCIE_PKGS)
 endif
 
+ifeq ($(GLUON_TARGET),x86-legacy)
+	GLUON_SITE_PACKAGES += $(USB_PKGS) $(PCIE_PKGS)
+endif
+
 # PCEngines ALIX Boards
 ifeq ($(GLUON_TARGET),x86-geode)
 	GLUON_SITE_PACKAGES += $(USB_PKGS) $(PCIE_PKGS)
