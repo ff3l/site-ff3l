@@ -6,20 +6,22 @@ GLUON_FEATURES := \
 	ebtables-source-filter \
 	mesh-batman-adv-15 \
 	mesh-vpn-fastd \
+	mesh-vpn-fastd-l2tp \
 	radvd \
 	respondd \
 	status-page \
 	web-advanced \
 	web-logging \
 	web-private-wifi \
-	web-wizard
+	web-wizard \
+	web-mesh-vpn-fastd \
+	web-network
 
 GLUON_SITE_PACKAGES := \
 gluon-config-mode-domain-select \
 gluon-config-mode-geo-location-osm \
 gluon-radv-filterd \
 iwinfo \
--gluon-web-mesh-vpn-fastd \
 respondd-module-airtime \
 gluon-ssid-changer \
 gluon-segment-mover \
