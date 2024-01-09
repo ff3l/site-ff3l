@@ -149,8 +149,6 @@ end
 
 -- Include all custom packages for RaspberryPi
 if target('bcm27xx') then
-	packages(pkgs_pci)
-	packages(pkgs_pci_net)
 	packages(pkgs_usb_hid)
 	packages(pkgs_usb_net)
 	packages(pkgs_usb_serial)
