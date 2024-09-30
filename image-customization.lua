@@ -164,3 +164,11 @@ if target('x86') then
 	packages(pkgs_usb_serial)
 	packages(pkgs_usb_storage)
 end
+
+-- Added hotfix
+if target('ramips', 'mt7621') or target('ramips', 'mt7622') or target('mediatek', 'filogic') then
+	-- restart device if mt7915e driver shows known failure symptom
+	packages {
+		'ffac-mt7915-hotfix',
+	}
+end
